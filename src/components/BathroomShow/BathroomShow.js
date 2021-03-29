@@ -8,7 +8,7 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem'
 import { withRouter, Redirect, Link } from 'react-router-dom'
 import { bathroomShow, bathroomDelete } from '../../api/bathroom'
 
-// import SecondMapContainer from '../MapBox/GoogleMap'
+import { GoogleMapContainer } from '../Maps/GoogleMap'
 
 class BathroomShow extends Component {
   constructor(props) {
@@ -78,7 +78,7 @@ class BathroomShow extends Component {
         <div className='row display-section'>
           <div className='col-6 offset-3 mb-3'>
             <h2 className='text-center'>Here Is A Single Loo</h2>
-            {/* <SecondMapContainer style={{ selfAlign: 'center' }} bathroom={bathroom}/> */}
+            <GoogleMapContainer style={{ selfAlign: 'center' }} bathroom={bathroom} />
             <Card style={{ width: '18rem', color: 'black' }}>
               <Card.Img variant="top" src={bathroom.photoUrl} />
               <Card.Body>

@@ -17,7 +17,7 @@ import BathroomShow from './components/BathroomShow/BathroomShow'
 import BathroomUpdate from './components/BathroomUpdate/BathroomUpdate'
 
 // MapBox components
-// import MapBoxContainer from './components/MapBox/MapBox'
+import MapBoxContainer from './components/Maps/MapBox'
 
 import Homepage from './components/Home/Home'
 import Footer from './components/Footer/Footer'
@@ -87,7 +87,7 @@ class App extends Component {
             <AuthenticatedRoute user={user} exact path='/bathrooms' render={() => (
               <div style={{ minHeight: '78vh' }}>
                 <h2 className='text-center mb-3' style={{ marginBottom: '2%' }}>All Loos</h2>
-                {/* <MapBoxContainer /> */}
+                <MapBoxContainer />
                 <BathroomIndex msgAlert={this.msgAlert} user={user} />
               </div>
             )} />
