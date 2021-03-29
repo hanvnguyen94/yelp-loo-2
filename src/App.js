@@ -11,10 +11,10 @@ import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
 
 // Bathroom components
-// import BathroomIndex from './components/BathroomIndex/BathroomIndex'
-// // import BathroomCreate from './components/BathroomCreate/BathroomCreate'
-// import BathroomShow from './components/BathroomShow/BathroomShow'
-// import BathroomUpdate from './components/BathroomUpdate/BathroomUpdate'
+import BathroomIndex from './components/BathroomIndex/BathroomIndex'
+import BathroomCreate from './components/BathroomCreate/ BathroomCreate'
+import BathroomShow from './components/BathroomShow/BathroomShow'
+import BathroomUpdate from './components/BathroomUpdate/BathroomUpdate'
 
 // MapBox components
 // import MapBoxContainer from './components/MapBox/MapBox'
@@ -84,28 +84,28 @@ class App extends Component {
             <Route exact path='/' user={user} render={() => (
               <Homepage user={user} />
             )} />
-            {/* <AuthenticatedRoute user={user} exact path='/bathrooms' render={() => (
+            <AuthenticatedRoute user={user} exact path='/bathrooms' render={() => (
               <div style={{ minHeight: '78vh' }}>
                 <h2 className='text-center mb-3' style={{ marginBottom: '2%' }}>All Loos</h2>
-                <MapBoxContainer />
+                {/* <MapBoxContainer /> */}
                 <BathroomIndex msgAlert={this.msgAlert} user={user} />
               </div>
-            )} /> */}
+            )} />
 
             {/* Create a bathroom */}
-            {/* <AuthenticatedRoute user={user} path='/create-bathroom' render={() => (
+            <AuthenticatedRoute user={user} path='/create-bathroom' render={() => (
               <BathroomCreate msgAlert={this.msgAlert} user={user} />
-            )} /> */}
+            )} />
 
             {/* Get a single bathroom | show */}
-            {/* <AuthenticatedRoute user={user} exact path='/bathrooms/:id' render={() => (
+            <AuthenticatedRoute user={user} exact path='/bathrooms/:id' render={() => (
               <BathroomShow msgAlert={this.msgAlert} user={user} />
-            )} /> */}
+            )} />
 
             {/* Update a single bathroom */}
-            {/* <AuthenticatedRoute user={user} path='/bathrooms/:id/edit/' render={() => (
+            <AuthenticatedRoute user={user} path='/bathrooms/:id/edit/' render={() => (
               <BathroomUpdate msgAlert={this.msgAlert} user={user} />
-            )} /> */}
+            )} />
           </main>
         </section>
         <Footer />
